@@ -1,0 +1,87 @@
+{
+  "id": "00048e02-de6f-5ae5-b2e4-d1c908412483",
+  "payload": {
+    "metadata": {
+      "alerts": [],
+      "collection_slug": "gestao-patrimonial",
+      "content_role": "normative_body",
+      "document_id": "2a520efe8575b2dd647fd2351c6b6d6bddeb2dbfd866a0f475bf3d88b218c065",
+      "eligible": true,
+      "normative": {
+        "code": "MCASP",
+        "edition": "11ª Edição",
+        "part": "body",
+        "revision": null
+      },
+      "page_end": 496,
+      "page_start": 496,
+      "printed_pages": [],
+      "processing": {
+        "content_hash": "7249590058aca731ee1fc24f462e0352d92c3e2790a0e54bc04ff69b5f8e5e86",
+        "review_status": "validated",
+        "snapshot": "5486fa59265c6df906805930058ac00dfe2f41eb033cdd09663f931647e3e880",
+        "version": "patrimonio.prepare.v38"
+      },
+      "references": [
+        {
+          "code": "MCASP",
+          "locator": null,
+          "resolved": false,
+          "text": "MCASP"
+        }
+      ],
+      "retrieval_role": "direct_complement",
+      "retrieval_scope": "principal",
+      "source": {
+        "path": "colecoes/gestao_patrimonial/MCASP - 11ª Edição.pdf",
+        "sha256": "2a520efe8575b2dd647fd2351c6b6d6bddeb2dbfd866a0f475bf3d88b218c065"
+      },
+      "source_pdf": {
+        "object_key": "collections/gestao-patrimonial/pdf/2a520efe8575b2dd647fd2351c6b6d6bddeb2dbfd866a0f475bf3d88b218c065.pdf",
+        "sha256": "2a520efe8575b2dd647fd2351c6b6d6bddeb2dbfd866a0f475bf3d88b218c065",
+        "bucket": "baseia-patrimonio-poc"
+      },
+      "structure": {
+        "ancestor_ids": [
+          "dfbd660d-75c1-5625-a44e-f37a8e2f646f",
+          "e25bb900-b52c-5aad-ae67-142082766e86"
+        ],
+        "context_point_ids": [],
+        "covered_node_ids": ["00b653ab-2ca4-52e7-b48c-e68e1b3318ec"],
+        "fragment_order": 0,
+        "node_id": "00b653ab-2ca4-52e7-b48c-e68e1b3318ec",
+        "order": 1076,
+        "parent_id": "e25bb900-b52c-5aad-ae67-142082766e86",
+        "path": [
+          "Gestão Patrimonial",
+          "MCASP",
+          "i. No órgão ou entidade de origem do crédito:"
+        ]
+      },
+      "topics": []
+    },
+    "assets": [],
+    "text": "Gestão Patrimonial > MCASP > i. No órgão ou entidade de origem do crédito:: Baixa de créditos encaminhados para inscrição em dívida ativa pela rejeição da inscrição.\n\nNatureza da informação: controle\n\nD 8.3.1.2.x.xx.xx Créditos Encaminhados para a Dívida Ativa\n\nC 8.3.1.3.x.xx.xx Cancelamento de Créditos Encaminhados para a Dívida Ativa"
+  },
+  "vector": {
+    "sparse": {
+      "indices": [
+        19522071, 67864594, 264741300, 516762017, 573434639, 586109477,
+        632938736, 645196048, 647566671, 655955059, 871745156, 915760117,
+        916214203, 1050319643, 1114505193, 1120066484, 1433003856, 1546404015,
+        1582326027, 1787038631, 1810453357, 1818586924, 1836089961, 1888875038,
+        1899707475, 2128973781
+      ],
+      "values": [
+        1.5123523, 1.9754472, 1.9104477, 1.5123523, 1.5123523, 1.9104477,
+        1.5123523, 1.5123523, 1.5123523, 1.5123523, 1.5123523, 1.9104477,
+        1.5123523, 1.7924888, 1.7924888, 1.5123523, 1.9754472, 1.9104477,
+        1.5123523, 1.5123523, 1.7924888, 1.5123523, 1.5123523, 1.7924888,
+        1.5123523, 1.5123523
+      ]
+    },
+    "dense": [
+      -0.00027101126, 0.01954119, -0.0014724225, -0.029298607, -0.0011979948
+    ]
+  }
+}
