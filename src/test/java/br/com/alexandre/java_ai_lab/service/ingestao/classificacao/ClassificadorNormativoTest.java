@@ -54,13 +54,27 @@ class ClassificadorNormativoTest {
     @CsvSource({
             "a) item,ALINEA,a)",
             "ab) item,ALINEA,ab)",
+            "m)devolução ao paiol,ALINEA,m)",
+            "b)nos casos acima,ALINEA,b)",
             "IX) item,SUBALINEA,IX)",
+            "III)o bem entregue,SUBALINEA,III)",
+            "IV)fotos,SUBALINEA,IV)",
+            "XIX)texto original,SUBALINEA,XIX)",
             "- item,ITEM_LISTA,-",
             "– item,ITEM_LISTA,–",
             "— item,ITEM_LISTA,—"
     })
     void marcadoresTextuaisIndependemDoTipoDeOrigem(String texto, Tipo esperado, String marcador) {
         assertClassificacao(esperado, marcador, "doc_title", texto, new ContextoClassificacao(-1, null));
+    }
+
+    /** Mantém a distinção literal entre I romano e l minúsculo, sem corrigir numeração. */
+    @Test
+    void naoConfundeLetraLEIouRomanoAnomalo() {
+        var contexto = new ContextoClassificacao(1, null);
+        assertClassificacao(ALINEA, "l)", "text", "l)devolução", contexto);
+        assertClassificacao(SUBALINEA, "I)", "text", "I)texto", contexto);
+        assertClassificacao(TEXTO, null, "text", "abc)não é marcador", contexto);
     }
 
     /** Aceita título unido em caixa alta, mas não referências ou entradas de índice com hífen. */

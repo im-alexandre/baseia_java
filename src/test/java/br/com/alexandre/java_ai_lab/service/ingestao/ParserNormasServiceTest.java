@@ -53,6 +53,27 @@ class ParserNormasServiceTest {
         assertEquals("I) Subalínea", elementos.get(2).pais().subalinea());
     }
 
+    /** Marcadores colados ao texto devem abrir novos pais, sem virar TEXTO agrupado ao anterior. */
+    @Test
+    void marcadoresSemEspacoNaoPerdemHierarquia() {
+        JsonNode entrada = documento(bloco("doc_title", 0, "CAPÍTULO 3", true),
+                bloco("doc_title", 1, "GESTÃO", false),
+                bloco("paragraph_title", 2, "3.5.5. Destinação", false),
+                bloco("text", 3, "a) primeiro caso", false),
+                bloco("text", 4, "b)nos casos acima", false),
+                bloco("text", 5, "I)documentos", false),
+                bloco("text", 6, "II)comprovação", false),
+                bloco("text", 7, "c) último caso", false));
+
+        List<ElementoNormativo> elementos = parser.parse(reader.ler(entrada));
+        assertEquals(List.of(ALINEA, ALINEA, SUBALINEA, SUBALINEA, ALINEA),
+                elementos.stream().map(ElementoNormativo::tipo).toList());
+        assertEquals("b)nos casos acima", elementos.get(2).pais().alinea());
+        assertEquals("b)nos casos acima", elementos.get(3).pais().alinea());
+        assertNull(elementos.get(4).pais().alinea());
+        assertEquals("II)comprovação", elementos.get(3).texto());
+    }
+
     /** A ausência de permissão a anexos não depende de leituras anteriores. */
     @Test
     void respeitaAllowlistDeAnexos() {

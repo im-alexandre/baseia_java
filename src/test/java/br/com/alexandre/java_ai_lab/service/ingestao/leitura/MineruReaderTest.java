@@ -125,6 +125,19 @@ class MineruReaderTest {
         assertErroCaixa("bbox invertido.", "[0,0.8,1,0.2]");
     }
 
+    /** Bloqueia glifos de fonte corrompida, sem substituir letras por adivinhação. */
+    @Test
+    void rejeitaGlifosNaoMapeadosAntesDoParser() {
+        for (String glifo : List.of("\u0013", "\u000e", "\u001d", "\ufffd")) {
+            var erro = assertThrows(IllegalArgumentException.class,
+                    () -> reader.ler(documento(pagina(0, bloco("text", 7, "a" + glifo + "vidades")))));
+            assertTrue(erro.getMessage().contains("Glifo não mapeado"));
+            assertTrue(erro.getMessage().contains("página física 1, bloco 7"));
+        }
+        assertThrows(IllegalArgumentException.class,
+                () -> reader.ler(documento(pagina(0, bloco("text", 8, "\u001c texto")))));
+    }
+
     /** Monta somente o envelope suportado; os testes controlam os fragmentos das páginas. */
     private JsonNode documento(String... paginas) {
         return mapper.readTree("{\"schema\":\"docvortex.middle\",\"schema_version\":\"2.0\",\"pages\":["

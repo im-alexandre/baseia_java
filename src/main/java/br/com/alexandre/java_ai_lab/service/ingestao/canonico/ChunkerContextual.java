@@ -49,6 +49,9 @@ public class ChunkerContextual {
                     partes.add(new Parte(filho.id(), filho.texto()));
                 }
             }
+            // Seções da MB como "1.2. PROPÓSITOS" são contexto, não evidência isolada.
+            // Um artigo legal "Art. 1º" e seções com prosa própria continuam indexáveis.
+            if (tituloSecaoIsolado(ancora, partes)) continue;
             if (partes.isEmpty()) continue;
             List<Nivel> hierarquia = caminho(ancora, porId);
             List<Parte> fragmentos = dividir(partes);
@@ -66,6 +69,13 @@ public class ChunkerContextual {
             if (!grupo.isEmpty()) resultado.add(criarChunk(documento, ancora, hierarquia, grupo, resultado.size(), porId));
         }
         return List.copyOf(resultado);
+    }
+
+    /** Exclui somente o ponto composto pelo título da seção, conservando seu nó na árvore. */
+    private boolean tituloSecaoIsolado(No ancora, List<Parte> partes) {
+        return ancora.tipo() == ARTIGO && ancora.marcador() != null
+                && ancora.marcador().matches("\\d+\\.\\d+")
+                && partes.size() == 1 && partes.getFirst().noId().equals(ancora.id());
     }
 
     /** Divide textos grandes por espaço ou quebra, mantendo exatamente as sequências de caracteres. */

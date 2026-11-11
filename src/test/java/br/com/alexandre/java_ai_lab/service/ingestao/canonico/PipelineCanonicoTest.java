@@ -94,6 +94,72 @@ class PipelineCanonicoTest {
         assertEquals("I)", preparado.documento().nos().get(3).marcador());
     }
 
+    /** Sinaliza a sequência impressa VIII → XIX → X, preservando os três marcadores. */
+    @Test
+    void alertaSaltosRomanosSemCorrigirDocumento() {
+        String cap = "CAPÍTULO 2. GESTÃO";
+        String art = "2.6. MOVIMENTAÇÃO";
+        String inciso = "2.6.2. Procedimentos";
+        String alinea = "a) Movimentações";
+        List<ElementoNormativo> elementos = List.of(
+                norma(CAPITULO, "CAPÍTULO 2", cap, 1, 0, PaisNormativos.vazios()),
+                norma(ARTIGO, "2.6", art, 1, 1, pais(cap, null, null, null, null)),
+                norma(INCISO, "2.6.2", inciso, 1, 2, pais(cap, art, null, null, null)),
+                norma(ALINEA, "a)", alinea, 1, 3, pais(cap, art, inciso, null, null)),
+                norma(SUBALINEA, "VIII)", "VIII) registro", 1, 4, pais(cap, art, inciso, alinea, null)),
+                norma(SUBALINEA, "XIX)", "XIX) movimentação", 1, 5, pais(cap, art, inciso, alinea, null)),
+                norma(SUBALINEA, "X)", "X) documento", 1, 6, pais(cap, art, inciso, alinea, null)));
+
+        Preparacao resultado = preparador.norma("SGM-303", "7REV", elementos);
+        assertEquals(List.of("VIII)", "XIX)", "X)"), resultado.documento().nos().subList(4, 7)
+                .stream().map(No::marcador).toList());
+        assertEquals(2, resultado.alertas().stream()
+                .filter(a -> "SEQUENCIA_SUBALINEA".equals(a.codigo())).count());
+        assertFalse(resultado.alertas().stream().anyMatch(a -> "ROMANO_INVALIDO".equals(a.codigo())));
+    }
+
+    /** Aponta dispositivos perdidos, hifenização e C0 sem tentar reescrever o original. */
+    @Test
+    void alertaConteudoSuspeitoPreservandoOTexto() {
+        String cap = "CAPÍTULO 1. TESTE";
+        String texto = "Continuação\nIII)o bem entregue aos pedi-\ndos da OM tem a\u0013vidades.";
+        List<ElementoNormativo> elementos = List.of(
+                norma(CAPITULO, "CAPÍTULO 1", cap, 1, 0, PaisNormativos.vazios()),
+                norma(TEXTO, null, texto, 2, 1, pais(cap, null, null, null, null)));
+
+        Preparacao resultado = preparador.norma("SGM-303", "7REV", elementos);
+        assertEquals(texto, resultado.documento().nos().get(1).texto());
+        assertTrue(resultado.alertas().stream().anyMatch(a -> "MARCADOR_NAO_CLASSIFICADO".equals(a.codigo())));
+        assertTrue(resultado.alertas().stream().anyMatch(a -> "HIFENIZACAO_AMBIGUA".equals(a.codigo())));
+        assertTrue(resultado.alertas().stream().anyMatch(a -> "GLIFO_NAO_MAPEADO".equals(a.codigo())));
+    }
+
+    /** Títulos numéricos da MB continuam na árvore, mas não viram pontos sem evidência. */
+    @Test
+    void omiteChunkDeTituloIsoladoSemOmitirDispositivoOuArtigoLegal() {
+        String cap = "CAPÍTULO 1. TESTE";
+        String secao = "1.2. PROPÓSITOS";
+        String inciso = "1.2.1. Procedimentos para gestão:";
+        List<ElementoNormativo> elementos = List.of(
+                norma(CAPITULO, "CAPÍTULO 1", cap, 1, 0, PaisNormativos.vazios()),
+                norma(ARTIGO, "1.2", secao, 1, 1, pais(cap, null, null, null, null)),
+                norma(INCISO, "1.2.1", inciso, 1, 2, pais(cap, secao, null, null, null)),
+                norma(ALINEA, "a)", "a) A primeira obrigação", 1, 3,
+                        pais(cap, secao, inciso, null, null)),
+                norma(ARTIGO, "1.3", "1.3. CONCEITOS", 2, 4, pais(cap, null, null, null, null)));
+        Preparacao norma = preparador.norma("SGM-303", "7REV", elementos);
+
+        assertEquals(5, norma.documento().nos().size());
+        assertTrue(norma.chunks().stream().noneMatch(c -> c.noId().equals(norma.documento().nos().get(1).id())));
+        assertTrue(norma.chunks().stream().noneMatch(c -> c.noId().equals(norma.documento().nos().get(4).id())));
+        assertTrue(norma.chunks().stream().anyMatch(c -> c.noId().equals(norma.documento().nos().get(2).id())));
+
+        Preparacao lei = preparador.lei("LEI-14129", "2021", List.of(
+                lei(ARTIGO, "Art. 1º", "Art. 1º O acesso será garantido.", false,
+                        PaisLegislacao.vazios(), 1)));
+        assertEquals(1, lei.chunks().size());
+    }
+
     /** A redação citada não substitui a cadeia hierárquica do artigo alterador. */
     @Test
     void separaArtigosPropriosDeDispositivosCitados() {

@@ -48,9 +48,25 @@ public class MineruReader {
 
     /** Copia conteúdo e metadados originais de uma folha sem interpretar sua função normativa. */
     private BlocoMineru extrairBloco(JsonNode bloco, int paginaFisica, String paginaImpressa) {
-        return new BlocoMineru(bloco.path("type").asText(), texto(bloco.path("content")).strip(),
-                paginaFisica, paginaImpressa, indice(bloco, "index"), bbox(bloco),
+        String conteudo = texto(bloco.path("content"));
+        int indice = indice(bloco, "index");
+        validarGlifos(conteudo, paginaFisica, indice);
+        return new BlocoMineru(bloco.path("type").asText(), conteudo.strip(),
+                paginaFisica, paginaImpressa, indice, bbox(bloco),
                 bloco.path("continues_prev").asBoolean(false));
+    }
+
+    /** Impede que glifos não mapeados da camada PDF cheguem silenciosamente ao RAG. */
+    private void validarGlifos(String conteudo, int paginaFisica, int indice) {
+        for (int posicao = 0; posicao < conteudo.length();) {
+            int codigo = conteudo.codePointAt(posicao);
+            if ((codigo < 32 && codigo != '\n' && codigo != '\r' && codigo != '\t')
+                    || codigo == 127 || codigo == 0xFFFD) {
+                throw new IllegalArgumentException("Glifo não mapeado U+%04X na página física %d, bloco %d."
+                        .formatted(codigo, paginaFisica, indice));
+            }
+            posicao += Character.charCount(codigo);
+        }
     }
 
     /** Rejeita contratos diferentes do JSON de origem suportado antes de iniciar a leitura. */

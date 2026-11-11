@@ -2,7 +2,7 @@
 
 ## Entradas
 
-- **Normas MB:** o MinerU externo gera `docvortex.middle` 2.0. O `MineruReader` valida índices, `bbox`, páginas físicas/impressas, expansão de listas e `continues_prev`. A classificação determina capítulos, seções numeradas (`ARTIGO` no parser legado), itens numerados (`INCISO` no parser legado), alíneas e subalíneas. O parser filtra páginas preliminares e anexos sem permissão.
+- **Normas MB:** o MinerU externo gera `docvortex.middle` 2.0. O `MineruReader` valida índices, `bbox`, páginas físicas/impressas, expansão de listas, `continues_prev` e glifos não mapeados (C0/`U+FFFD`). A classificação determina capítulos, seções numeradas (`ARTIGO` no parser legado), itens numerados (`INCISO` no parser legado), alíneas e subalíneas. Os marcadores `m)devolução` e `III)o bem` são reconhecidos sem exigir espaço após `)`. O parser filtra páginas preliminares e anexos sem permissão.
 - **Leis:** o `HtmlLegislacaoReader` preserva referências DOM e âncoras, sem criar paginação artificial. `ParserLegislacaoService` trata identificação, ementa, capítulos, artigos, parágrafos, incisos, alíneas, artigos citados em alterações e fecho. O GET com `url` permite baixar o HTML da legislação.
 - Ambos preservam `origens`; o parser legado `parse()` continua retornando a lista útil, enquanto `parseCompleto()` mantém também estruturas e marcadores vazios para construir a árvore.
 
@@ -25,7 +25,7 @@ No HTML, artigos citados são filhos do dispositivo próprio que introduz a cita
 
 ## Chunking
 
-O `ChunkerContextual` cria unidade de recuperação centrada no dispositivo, incorporando seus filhos de `TEXTO`, `LISTA`, `ITEM_LISTA`, `TABELA` e `EQUACAO` diretamente subordinados. Capítulos/seções/títulos servem de contexto, sem constituir pontos só por terem heading. Texto direto desses níveis também é indexável.
+O `ChunkerContextual` cria unidade de recuperação centrada no dispositivo, incorporando seus filhos de `TEXTO`, `LISTA`, `ITEM_LISTA`, `TABELA` e `EQUACAO` diretamente subordinados. Capítulos/seções/títulos servem de contexto; uma seção numérica `ARTIGO` que contém apenas seu heading não gera ponto próprio. Texto direto desses níveis continua indexável, assim como os artigos de leis em HTML.
 
 O campo `texto` conserva o conteúdo da unidade; `textoEmbedding` adiciona código da norma, edição e breadcrumbs tipados. Trechos maiores que 4.000 caracteres são divididos em fragmentos, rastreáveis por `nosCobertos`. Páginas inicial/final consideram as origens MinerU usadas pelo chunk, e ficam ausentes no HTML.
 
@@ -70,9 +70,13 @@ O `IndexadorQdrant` usa os vetores nomeados configurados (`dense` por padrão), 
 
 - `I)` é frequentemente um número romano legítimo. Uma sequência `k) / I) / m)` pode indicar troca entre `I` maiúsculo e `l` minúsculo; o validador emite alerta `OCR_I_OU_L`, sem corrigir ou reinterpretar a norma.
 - Marcador repetido sob o mesmo pai emite alerta `MARCADOR_REPETIDO` para revisão, sem eliminar conteúdo.
+- A ordem de irmãos `ARTIGO`, `INCISO`, `ALINEA` e `SUBALINEA` produz `SEQUENCIA_<TIPO>` quando salta ou retrocede; `VIII) → XIX) → X)` permanece exatamente como consta na fonte. Romanos de grafia não canônica produzem `ROMANO_INVALIDO`.
+- Marcador de alínea/subalínea que sobrou em uma linha de `TEXTO` emite `MARCADOR_NAO_CLASSIFICADO`. O leitor recusa caracteres C0 indevidos ou `U+FFFD`; entradas canônicas externas com eles produzem `GLIFO_NAO_MAPEADO`.
+- Hifens em quebras de linha, como `pedi-\ndos`, geram `HIFENIZACAO_AMBIGUA`. Não se remove automaticamente o hífen: pode pertencer a um termo composto. O texto fiel continua disponível para conferência.
+- `IndexadorQdrant` exige confirmação explícita na presença de alertas. `GLIFO_NAO_MAPEADO` bloqueia a indexação mesmo com confirmação, pois não existe substituição automática confiável.
 - `continuaAnterior` é mantido na proveniência; a associação semântica usa a hierarquia, não confia no sinal isolado do MinerU.
 - Não há avaliação de vigência, consolidação de alterações legislativas, reranker, retrieval, agentes nem chat nesta fase.
-- As antigas extrações JSON e goldens foram excluídos. Após repetir o MinerU sobre os PDFs, comparar visualmente páginas e marcadores suspeitos antes de indexar é a etapa de validação necessária.
+- Os exemplos MinerU em `src/main/resources/exemplos/extracao_mineru_2` podem ser usados em auditoria manual; os testes unitários usam dados sintéticos. MAPCONT não possui uma abertura `CAPÍTULO` compatível com este parser SGM e requer política de classificação própria.
 
 ## Testes preservados
 

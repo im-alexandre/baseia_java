@@ -38,6 +38,9 @@ public class IndexadorQdrant {
 
     /** Indexa a edição somente após revisão dos alertas; reindexação não remove pontos obsoletos. */
     public int indexar(Preparacao preparacao, boolean confirmarAlertas) {
+        if (preparacao.alertas().stream().anyMatch(alerta -> "GLIFO_NAO_MAPEADO".equals(alerta.codigo()))) {
+            throw new IllegalArgumentException("Glifos não mapeados impedem a indexação; refaça a extração.");
+        }
         if (!confirmarAlertas && !preparacao.alertas().isEmpty()) {
             throw new IllegalArgumentException("Há alertas para revisão antes da indexação.");
         }
