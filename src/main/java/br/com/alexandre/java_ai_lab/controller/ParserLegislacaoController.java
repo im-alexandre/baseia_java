@@ -4,7 +4,6 @@ import br.com.alexandre.java_ai_lab.dto.ElementoLegislacao;
 import br.com.alexandre.java_ai_lab.service.ingestao.DownloadLegislacaoService;
 import br.com.alexandre.java_ai_lab.service.ingestao.ParserLegislacaoService;
 import br.com.alexandre.java_ai_lab.service.ingestao.leitura.HtmlLegislacaoReader;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +15,6 @@ import org.springframework.web.server.ResponseStatusException;
 
 import java.io.IOException;
 import java.net.URI;
-import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 /** Adaptador HTTP da leitura HTML, no mesmo padrão do parser de normas e sem armazenamento. */
@@ -41,20 +39,14 @@ public class ParserLegislacaoController {
     }
 
     /**
-     * Sem parâmetros, processa a cópia local da Lei 14.129/2021; com url, baixa e processa o HTML.
+     * Baixa e processa HTML de uma URL informada explicitamente.
      * URL inválida resulta em 400, falha de download em 502 e HTML incompatível em 400.
      *
-     * @param url endereço HTTP(S) da legislação; ausente seleciona o exemplo local
+     * @param url endereço HTTP(S) da legislação
      * @return elementos legais extraídos e hierarquizados em ordem documental
-     * @throws IOException se a leitura do recurso local falhar
      */
     @GetMapping(value = "/ingestao/legislacao/parse", produces = MediaType.APPLICATION_JSON_VALUE)
-    public List<ElementoLegislacao> exemploOuUrl(@RequestParam(required = false) String url) throws IOException {
-        if (url == null) {
-            try (var entrada = new ClassPathResource("exemplos/lei_14129_2021.html").getInputStream()) {
-                return parse(new String(entrada.readAllBytes(), StandardCharsets.UTF_8));
-            }
-        }
+    public List<ElementoLegislacao> porUrl(@RequestParam String url) {
         validarUrl(url);
         try {
             return parse(download.parse(url).content());

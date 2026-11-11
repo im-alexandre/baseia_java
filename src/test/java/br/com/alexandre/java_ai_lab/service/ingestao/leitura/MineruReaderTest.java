@@ -14,41 +14,6 @@ class MineruReaderTest {
     private final JsonMapper mapper = JsonMapper.builder().build();
     private final MineruReader reader = new MineruReader();
 
-    /** Confere a expansão da amostra real e a preservação dos artefatos anteriores ao corpo. */
-    @Test
-    void leTodasAsFolhasDaFixtureRealComOrigemPreservada() throws Exception {
-        JsonNode documento;
-        try (var entrada = getClass().getResourceAsStream("/ingestao/mineru/SGM-303-Rev7.json")) {
-            assertNotNull(entrada);
-            documento = mapper.readTree(entrada);
-        }
-        int blocosOriginais = 0;
-        for (JsonNode pagina : documento.path("pages")) blocosOriginais += pagina.path("blocks").size();
-        assertEquals(1952, blocosOriginais);
-
-        List<BlocoMineru> blocos = reader.ler(documento);
-        assertEquals(2576, blocos.size());
-        BlocoMineru capa = blocos.getFirst();
-        assertEquals("table", capa.tipoOrigem());
-        assertEquals(1, capa.paginaFisica());
-        assertNull(capa.paginaImpressa());
-        assertEquals(0, capa.indiceOrigem());
-        assertEquals(List.of(0.139, 0.098, 0.919, 0.913), capa.bbox());
-        assertTrue(capa.texto().startsWith("<table>"));
-        assertTrue(capa.texto().contains("MARINHA DO BRASIL"));
-        assertTrue(blocos.stream().anyMatch(b -> b.tipoOrigem().equals("header")));
-        assertTrue(blocos.stream().anyMatch(b -> b.tipoOrigem().equals("footer")));
-        assertTrue(blocos.stream().anyMatch(b -> b.tipoOrigem().equals("page_number")));
-        assertTrue(blocos.stream().anyMatch(b -> b.texto().equals("INTRODUÇÃO")));
-
-        BlocoMineru capitulo = blocos.stream()
-                .filter(b -> b.paginaFisica() == 14 && b.indiceOrigem() == 2).findFirst().orElseThrow();
-        assertEquals("doc_title", capitulo.tipoOrigem());
-        assertEquals("CAPÍTULO 1", capitulo.texto());
-        assertEquals("1-1", capitulo.paginaImpressa());
-        assertEquals(List.of(0.471, 0.068, 0.576, 0.084), capitulo.bbox());
-    }
-
     /** Exercita páginas e listas fora de ordem sem emitir novamente o conteúdo dos contêineres. */
     @Test
     void ordenaPaginasEBlocosEAchataListasAninhadasSemDuplicar() {

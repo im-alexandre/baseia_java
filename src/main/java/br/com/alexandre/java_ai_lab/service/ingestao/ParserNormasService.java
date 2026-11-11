@@ -72,6 +72,13 @@ public class ParserNormasService {
      *         capítulos, artigos e incisos são usados como contexto, mas omitidos da resposta
      */
     public List<ElementoNormativo> parse(List<BlocoMineru> blocos, Set<String> anexosPermitidos) {
+        return parseCompleto(blocos, anexosPermitidos).stream()
+                .filter(elemento -> !TIPOS_APENAS_CONTEXTO.contains(elemento.tipo()))
+                .toList();
+    }
+
+    /** Preserva também os níveis estruturais necessários à árvore canônica e à indexação. */
+    public List<ElementoNormativo> parseCompleto(List<BlocoMineru> blocos, Set<String> anexosPermitidos) {
         EstadoLeitura estado = new EstadoLeitura(anexosPermitidos);
         Set<Integer> preliminares = identificadorPreliminares.identificar(blocos);
         for (BlocoMineru bloco : blocos) {
@@ -81,11 +88,9 @@ public class ParserNormasService {
             }
             processarBloco(bloco, estado);
         }
-        // Aberturas estruturais continuam na lista para encerrar grupos, mesmo quando seus
-        // rótulos repetem um contexto anterior. Só são omitidas depois do agrupamento.
-        return agrupadorConteudo.agrupar(montadorContexto.montar(estado.resultado)).stream()
-                .filter(elemento -> !TIPOS_APENAS_CONTEXTO.contains(elemento.tipo()))
-                .toList();
+        // Não descarta aberturas: a representação canônica precisa de nós próprios para
+        // capítulos, seções numeradas e itens, além de seus descendentes.
+        return List.copyOf(agrupadorConteudo.agrupar(montadorContexto.montar(estado.resultado)));
     }
 
     /**

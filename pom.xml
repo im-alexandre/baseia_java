@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>br.com.alexandre</groupId>
-    <artifactId>java-ai-lab</artifactId>
+    <artifactId>baseia-java</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>java-ai-lab</name>
-    <description>java-ai-lab</description>
+    <name>baseia-java</name>
+    <description>Ingestão e indexação normativa determinística</description>
     <url/>
     <licenses>
         <license/>
@@ -38,7 +38,7 @@
             <artifactId>spring-boot-starter-webmvc</artifactId>
         </dependency>
 
-        <!-- Chat: OpenAI -->
+        <!-- Embeddings OpenAI/OpenRouter; chat permanece desativado na configuração. -->
         <dependency>
             <groupId>org.springframework.ai</groupId>
             <artifactId>spring-ai-starter-model-openai</artifactId>
@@ -48,19 +48,6 @@
             <artifactId>jsoup</artifactId>
             <version>1.21.2</version>
         </dependency>
-        <dependency>
-            <groupId>org.json</groupId>
-            <artifactId>json</artifactId>
-            <version>20231013</version>
-        </dependency>
-        <!-- Desenvolvimento -->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-devtools</artifactId>
-            <scope>runtime</scope>
-            <optional>true</optional>
-        </dependency>
-
         <!-- Testes -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
