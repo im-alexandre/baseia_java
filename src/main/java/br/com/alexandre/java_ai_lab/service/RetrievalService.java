@@ -59,7 +59,6 @@ public class RetrievalService {
                 .body(body)
                 .retrieve()
                 .body(String.class);
-        System.out.println(resposta);
         try {
             return jsonMapper.readTree(resposta);
         } catch (Exception e) {

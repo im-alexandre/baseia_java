@@ -36,3 +36,13 @@ build/
 .env
 .env.*
 src/test/resources/*
+!src/test/resources/ingestao/
+src/test/resources/ingestao/*
+!src/test/resources/ingestao/mineru/
+src/test/resources/ingestao/mineru/*
+!src/test/resources/ingestao/mineru/SGM-303-Rev7.json
+!src/test/resources/ingestao/mineru/SGM-303-Rev7-elementos-esperados.json
+!src/test/resources/ingestao/mineru/regras_observacoes.md
+!src/test/resources/ingestao/legislacao/
+src/test/resources/ingestao/legislacao/*
+!src/test/resources/ingestao/legislacao/lei_14129_2021.html

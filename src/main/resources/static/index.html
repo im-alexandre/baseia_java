@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java AI Lab</title>
+    <style>
+        body { max-width: 960px; margin: 32px auto; padding: 0 16px; font-family: system-ui, sans-serif; }
+        label { display: block; margin: 16px 0 6px; }
+        select, textarea, button { padding: 10px; font: inherit; }
+        textarea, pre { box-sizing: border-box; width: 100%; }
+        textarea { resize: vertical; }
+        button { margin-top: 12px; cursor: pointer; }
+        pre { height: 420px; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; padding: 12px; border: 1px solid #aaa; border-radius: 4px; background: white; font: inherit; }
+    </style>
+</head>
+<body>
+    <h1>Java AI Lab</h1>
+
+    <form action="http://localhost:8080/agent" method="get">
+        <label for="controller">Controller</label>
+        <select id="controller" onchange="this.form.action = this.value">
+            <option value="http://localhost:8080/agent">Agent</option>
+            <option value="http://localhost:8080/rag">RAG</option>
+            <option value="http://localhost:8080/chat">Chat</option>
+            <option value="http://localhost:8080/retrieval">Retrieval</option>
+        </select>
+
+        <label for="pergunta">Pergunta</label>
+        <textarea id="pergunta" name="pergunta" rows="3" required></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <h2>Resposta</h2>
+    <pre id="resposta" aria-live="polite"></pre>
+
+    <script>
+        const form = document.querySelector('form');
+        const resposta = document.querySelector('#resposta');
+        const enviar = form.querySelector('button');
+
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const url = new URL(form.action);
+            url.search = new URLSearchParams(new FormData(form)).toString();
+            enviar.disabled = true;
+            resposta.textContent = 'Consultando...';
+
+            try {
+                const response = await fetch(url, { method: form.method });
+                const texto = await response.text();
+                if (!response.ok) {
+                    throw new Error(`Erro HTTP ${response.status}: ${texto}`);
+                }
+                resposta.textContent = url.pathname === '/retrieval'
+                    ? texto.replace(/^ID: [^\r\n]*(?:\r?\n|$)/gm, '')
+                    : texto;
+            } catch (error) {
+                resposta.textContent = `Não foi possível obter a resposta. ${error.message}`;
+            } finally {
+                enviar.disabled = false;
+            }
+        });
+    </script>
+</body>
+</html>

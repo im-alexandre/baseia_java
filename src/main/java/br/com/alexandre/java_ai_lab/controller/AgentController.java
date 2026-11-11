@@ -14,6 +14,7 @@ public class AgentController {
     public AgentController(AgentService agentService) {
         this.agentService = agentService;
     }
+
     @GetMapping
     public String perguntar(@RequestParam String pergunta) {
         return agentService.perguntar(pergunta);
