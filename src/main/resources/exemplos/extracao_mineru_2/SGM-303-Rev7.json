@@ -757,7 +757,8 @@
                 0.919,
                 0.913
               ],
-              "content": "<table><tr><td rowspan=\"2\"><img src=\"data:image/jpeg;base64,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\"/>MARINHA DO BRASIL</td><td rowspan=\"2\">MARINHA DO BRASILSECRETARIA-GERAL DA MARINHA</td><td>SGM-303</td></tr><tr><td>OSTENSIVO</td></tr><tr><td colspan=\"3\">NORMAS SOBRE GESTÃO PATRIMONIAL7a Revisão</td></tr><tr><td colspan=\"3\">2025</td></tr></table>"
+              "image_path": "images/page_0_table_0.jpg",
+              "content": "<table><tr><td rowspan=\"2\"><img src=\"images/page_0_table_image_0_1.jpg\"/>MARINHA DO BRASIL</td><td rowspan=\"2\">MARINHA DO BRASILSECRETARIA-GERAL DA MARINHA</td><td>SGM-303</td></tr><tr><td>OSTENSIVO</td></tr><tr><td colspan=\"3\">NORMAS SOBRE GESTÃO PATRIMONIAL7a Revisão</td></tr><tr><td colspan=\"3\">2025</td></tr></table>"
             }
           ]
         },
@@ -858,9 +859,9 @@
           "index": 3,
           "bbox": [
             0.433,
-            0.303,
+            0.304,
             0.616,
-            0.318
+            0.317
           ],
           "content": [
             {
@@ -1005,6 +1006,7 @@
                 0.714,
                 0.852
               ],
+              "image_path": "images/page_3_table_2.jpg",
               "content": "<table><tr><td>AUTENTICADO PELO ORC</td><td></td></tr><tr><td>Em____/____/____.</td><td>RUBRICACARIMBO DO ORC</td></tr></table>"
             }
           ]
@@ -1384,8 +1386,8 @@
           "index": 23,
           "bbox": [
             0.139,
-            0.803,
-            0.599,
+            0.802,
+            0.6,
             0.82
           ],
           "content": [
@@ -1646,7 +1648,7 @@
               "content": [
                 {
                   "type": "text",
-                  "content": "3.9. DESTINAÇÃO DE MATERIAL EM REPARO NO EXTERIOR .... 3-14"
+                  "content": "3.9. DESTINAÇÃO DE MATERIAL EM REPARO NO EXTERIOR 3-14"
                 }
               ]
             },
@@ -1693,7 +1695,7 @@
             0.139,
             0.372,
             0.888,
-            0.485
+            0.884
           ],
           "content": [
             {
@@ -1759,169 +1761,169 @@
                   "content": "4.4. CONTROLE DE BENS DE ESTOQUE 4-6"
                 }
               ]
+            },
+            {
+              "type": "text",
+              "index": 16,
+              "bbox": [
+                0.14,
+                0.5,
+                0.906,
+                0.537
+              ],
+              "content": [
+                {
+                  "type": "text",
+                  "content": "4.5. REGISTRO E CONTROLE CONTÁBIL DOS COMBUSTÍVEIS, LUBRIFICANTES E GRAXAS (CLG) 4-10"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "index": 17,
+              "bbox": [
+                0.14,
+                0.552,
+                0.895,
+                0.568
+              ],
+              "content": [
+                {
+                  "type": "text",
+                  "content": "4.6. CONTROLE DOS BENS MÓVEIS 4-13"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "index": 18,
+              "bbox": [
+                0.14,
+                0.583,
+                0.895,
+                0.6
+              ],
+              "content": [
+                {
+                  "type": "text",
+                  "content": "4.7. CONTROLE DOS BENS MÓVEIS NAS INCUMBÊNCIAS 4-16"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "index": 19,
+              "bbox": [
+                0.14,
+                0.616,
+                0.895,
+                0.632
+              ],
+              "content": [
+                {
+                  "type": "text",
+                  "content": "4.8. CONTROLE DOS BENS INTANGÍVEIS 4-19"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "index": 20,
+              "bbox": [
+                0.14,
+                0.647,
+                0.895,
+                0.664
+              ],
+              "content": [
+                {
+                  "type": "text",
+                  "content": "4.9. COMPATIBILIZAÇÃO FINANCEIRA NO SIAFI 4-20"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "index": 21,
+              "bbox": [
+                0.14,
+                0.678,
+                0.906,
+                0.716
+              ],
+              "content": [
+                {
+                  "type": "text",
+                  "content": "4.10. MATERIAL PARA DOAÇÃO SOCIAL, ASSISTÊNCIA MÉDICA, REPRESENTAÇÃO E PRE-MIAÇÃO....4-20"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "index": 22,
+              "bbox": [
+                0.14,
+                0.73,
+                0.906,
+                0.767
+              ],
+              "content": [
+                {
+                  "type": "text",
+                  "content": "4.11. OBTENÇÃO DE MATERIAL DE TECNOLOGIA DA INFORMAÇÃO E COMUNICAÇÃO (TIC) 4-21"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "index": 23,
+              "bbox": [
+                0.14,
+                0.783,
+                0.906,
+                0.819
+              ],
+              "content": [
+                {
+                  "type": "text",
+                  "content": "4.12. PROCEDIMENTOS PATRIMONIAIS DO ENCERRAMENTO DO EXERCÍCIO FINANCEIRO DAS OMC....4-23"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "index": 24,
+              "bbox": [
+                0.14,
+                0.834,
+                0.895,
+                0.851
+              ],
+              "content": [
+                {
+                  "type": "text",
+                  "content": "4.13. GESTÃO PATRIMONIAL CENTRALIZADA....4-24"
+                }
+              ]
+            },
+            {
+              "type": "text",
+              "index": 25,
+              "bbox": [
+                0.14,
+                0.866,
+                0.895,
+                0.883
+              ],
+              "content": [
+                {
+                  "type": "text",
+                  "content": "4.14. DISPOSIÇÕES GERAIS.... 4-25"
+                }
+              ]
             }
           ],
           "sub_type": "text"
-        },
-        {
-          "type": "text",
-          "index": 16,
-          "bbox": [
-            0.14,
-            0.5,
-            0.906,
-            0.537
-          ],
-          "content": [
-            {
-              "type": "text",
-              "content": "4.5. REGISTRO E CONTROLE CONTÁBIL DOS COMBUSTÍVEIS, LUBRIFICANTES E GRAXAS (CLG) 4-10"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "index": 17,
-          "bbox": [
-            0.14,
-            0.551,
-            0.895,
-            0.568
-          ],
-          "content": [
-            {
-              "type": "text",
-              "content": "4.6. CONTROLE DOS BENS MÓVEIS 4-13"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "index": 18,
-          "bbox": [
-            0.14,
-            0.583,
-            0.895,
-            0.6
-          ],
-          "content": [
-            {
-              "type": "text",
-              "content": "4.7. CONTROLE DOS BENS MÓVEIS NAS INCUMBÊNCIAS 4-16"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "index": 19,
-          "bbox": [
-            0.14,
-            0.616,
-            0.895,
-            0.632
-          ],
-          "content": [
-            {
-              "type": "text",
-              "content": "4.8. CONTROLE DOS BENS INTANGÍVEIS 4-19"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "index": 20,
-          "bbox": [
-            0.14,
-            0.647,
-            0.895,
-            0.664
-          ],
-          "content": [
-            {
-              "type": "text",
-              "content": "4.9. COMPATIBILIZAÇÃO FINANCEIRA NO SIAFI 4-20"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "index": 21,
-          "bbox": [
-            0.14,
-            0.678,
-            0.906,
-            0.716
-          ],
-          "content": [
-            {
-              "type": "text",
-              "content": "4.10. MATERIAL PARA DOAÇÃO SOCIAL, ASSISTÊNCIA MÉDICA, REPRESENTAÇÃO E PRE-MIAÇÃO....4-20"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "index": 22,
-          "bbox": [
-            0.14,
-            0.73,
-            0.906,
-            0.767
-          ],
-          "content": [
-            {
-              "type": "text",
-              "content": "4.11. OBTENÇÃO DE MATERIAL DE TECNOLOGIA DA INFORMAÇÃO E COMUNICAÇÃO (TIC) 4-21"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "index": 23,
-          "bbox": [
-            0.14,
-            0.782,
-            0.906,
-            0.819
-          ],
-          "content": [
-            {
-              "type": "text",
-              "content": "4.12. PROCEDIMENTOS PATRIMONIAIS DO ENCERRAMENTO DO EXERCÍCIO FINANCEIRO DAS OMC....4-23"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "index": 24,
-          "bbox": [
-            0.14,
-            0.834,
-            0.895,
-            0.851
-          ],
-          "content": [
-            {
-              "type": "text",
-              "content": "4.13. GESTÃO PATRIMONIAL CENTRALIZADA....4-24"
-            }
-          ]
-        },
-        {
-          "type": "text",
-          "index": 25,
-          "bbox": [
-            0.14,
-            0.866,
-            0.895,
-            0.883
-          ],
-          "content": [
-            {
-              "type": "text",
-              "content": "4.14. DISPOSIÇÕES GERAIS.... 4-25"
-            }
-          ]
         },
         {
           "type": "footer",
@@ -3004,7 +3006,7 @@
           "content": [
             {
               "type": "text",
-              "content": "IV) Conclusão - parte que responde objetivamente à consulta."
+              "content": "IV)Conclusão - parte que responde objetivamente à consulta."
             }
           ]
         },
@@ -3078,7 +3080,7 @@
           "index": 8,
           "bbox": [
             0.138,
-            0.615,
+            0.616,
             0.427,
             0.633
           ],
@@ -4057,7 +4059,7 @@
               "bbox": [
                 0.209,
                 0.824,
-                0.722,
+                0.723,
                 0.841
               ],
               "content": [
@@ -4073,7 +4075,7 @@
               "bbox": [
                 0.209,
                 0.851,
-                0.697,
+                0.698,
                 0.867
               ],
               "content": [
@@ -4268,7 +4270,7 @@
           "type": "paragraph_title",
           "index": 6,
           "bbox": [
-            0.21,
+            0.209,
             0.147,
             0.485,
             0.163
@@ -4406,7 +4408,7 @@
               "index": 15,
               "bbox": [
                 0.209,
-                0.434,
+                0.433,
                 0.588,
                 0.45
               ],
@@ -4422,7 +4424,7 @@
               "index": 16,
               "bbox": [
                 0.138,
-                0.46,
+                0.459,
                 0.906,
                 0.501
               ],
@@ -4440,7 +4442,7 @@
                 0.209,
                 0.512,
                 0.585,
-                0.527
+                0.528
               ],
               "content": [
                 {
@@ -4453,7 +4455,7 @@
               "type": "text",
               "index": 18,
               "bbox": [
-                0.209,
+                0.208,
                 0.538,
                 0.845,
                 0.554
@@ -4523,7 +4525,7 @@
           "index": 22,
           "bbox": [
             0.138,
-            0.643,
+            0.642,
             0.907,
             0.841
           ],
@@ -4533,7 +4535,7 @@
               "index": 23,
               "bbox": [
                 0.138,
-                0.643,
+                0.642,
                 0.907,
                 0.711
               ],
@@ -4564,7 +4566,7 @@
               "type": "text",
               "index": 25,
               "bbox": [
-                0.209,
+                0.208,
                 0.772,
                 0.841,
                 0.789
@@ -4580,7 +4582,7 @@
               "type": "text",
               "index": 26,
               "bbox": [
-                0.209,
+                0.208,
                 0.798,
                 0.869,
                 0.816
@@ -4599,7 +4601,7 @@
                 0.209,
                 0.824,
                 0.547,
-                0.841
+                0.842
               ],
               "content": [
                 {
@@ -5532,7 +5534,7 @@
             0.137,
             0.433,
             0.907,
-            0.528
+            0.529
           ],
           "content": [
             {
@@ -5546,9 +5548,9 @@
           "index": 9,
           "bbox": [
             0.209,
-            0.537,
             0.538,
-            0.556
+            0.538,
+            0.555
           ],
           "content": [
             {
@@ -5580,7 +5582,7 @@
             0.209,
             0.642,
             0.592,
-            0.66
+            0.659
           ],
           "content": [
             {
@@ -5612,7 +5614,7 @@
             0.209,
             0.72,
             0.534,
-            0.738
+            0.737
           ],
           "content": [
             {
@@ -5923,7 +5925,7 @@
           "bbox": [
             0.16,
             0.642,
-            0.763,
+            0.761,
             0.921
           ],
           "content": [
@@ -6077,7 +6079,7 @@
               "bbox": [
                 0.162,
                 0.876,
-                0.368,
+                0.367,
                 0.893
               ],
               "content": [
@@ -6093,7 +6095,7 @@
               "bbox": [
                 0.162,
                 0.903,
-                0.377,
+                0.376,
                 0.92
               ],
               "content": [
@@ -8743,7 +8745,7 @@
             0.09,
             0.512,
             0.861,
-            0.607
+            0.658
           ],
           "content": [
             {
@@ -8793,25 +8795,25 @@
                   "content": "c) apropriar no SIAFI os bens adquiridos pelas OMA, quando da entrega na OMF;"
                 }
               ]
+            },
+            {
+              "type": "text",
+              "index": 14,
+              "bbox": [
+                0.09,
+                0.616,
+                0.86,
+                0.658
+              ],
+              "content": [
+                {
+                  "type": "text",
+                  "content": "d) emitir os DH para apropriação contábil dos fornecimentos de material para as OM-CI e OMCN;"
+                }
+              ]
             }
           ],
           "sub_type": "text"
-        },
-        {
-          "type": "text",
-          "index": 14,
-          "bbox": [
-            0.09,
-            0.616,
-            0.86,
-            0.658
-          ],
-          "content": [
-            {
-              "type": "text",
-              "content": "d) emitir os DH para apropriação contábil dos fornecimentos de material para as OM-CI e OMCN;"
-            }
-          ]
         },
         {
           "type": "text",
@@ -9542,7 +9544,7 @@
           "bbox": [
             0.091,
             0.355,
-            0.406,
+            0.407,
             0.372
           ],
           "content": [
@@ -11696,8 +11698,8 @@
           "bbox": [
             0.131,
             0.456,
-            0.913,
-            0.817
+            0.912,
+            0.818
           ],
           "content": [
             {
@@ -11771,7 +11773,7 @@
                 0.137,
                 0.773,
                 0.906,
-                0.815
+                0.814
               ],
               "content": [
                 {
@@ -12390,10 +12392,10 @@
           "type": "list",
           "index": 8,
           "bbox": [
-            0.137,
-            0.538,
-            0.907,
-            0.789
+            0.136,
+            0.536,
+            0.91,
+            0.79
           ],
           "content": [
             {
@@ -12403,7 +12405,7 @@
                 0.208,
                 0.538,
                 0.79,
-                0.555
+                0.553
               ],
               "content": [
                 {
@@ -12485,7 +12487,7 @@
           "bbox": [
             0.138,
             0.799,
-            0.408,
+            0.407,
             0.815
           ],
           "content": [
@@ -13267,7 +13269,7 @@
           "bbox": [
             0.257,
             0.878,
-            0.514,
+            0.515,
             0.919
           ],
           "content": [
@@ -13293,7 +13295,7 @@
               "bbox": [
                 0.257,
                 0.904,
-                0.514,
+                0.515,
                 0.919
               ],
               "content": [
@@ -13334,7 +13336,7 @@
           "content": [
             {
               "type": "text",
-              "content": "-2-7-"
+              "content": "- 2-7 -"
             }
           ]
         },
@@ -13850,7 +13852,7 @@
             0.205,
             0.611,
             0.911,
-            0.894
+            0.895
           ],
           "content": [
             {
@@ -15840,7 +15842,7 @@
             0.825,
             0.044,
             0.906,
-            0.059
+            0.058
           ],
           "content": [
             {
@@ -15855,8 +15857,8 @@
           "bbox": [
             0.138,
             0.12,
-            0.468,
-            0.137
+            0.467,
+            0.136
           ],
           "content": [
             {
@@ -15889,7 +15891,7 @@
           "bbox": [
             0.137,
             0.173,
-            0.908,
+            0.907,
             0.242
           ],
           "content": [
@@ -15905,7 +15907,7 @@
           "bbox": [
             0.137,
             0.251,
-            0.906,
+            0.907,
             0.711
           ],
           "content": [
@@ -15915,7 +15917,7 @@
               "bbox": [
                 0.138,
                 0.251,
-                0.906,
+                0.907,
                 0.294
               ],
               "content": [
@@ -16124,7 +16126,7 @@
           "type": "footer",
           "index": 19,
           "bbox": [
-            0.139,
+            0.14,
             0.942,
             0.24,
             0.956
@@ -16320,7 +16322,7 @@
           "index": 9,
           "bbox": [
             0.209,
-            0.434,
+            0.433,
             0.329,
             0.45
           ],
@@ -16879,7 +16881,7 @@
             0.825,
             0.044,
             0.906,
-            0.058
+            0.059
           ],
           "content": [
             {
@@ -16895,7 +16897,7 @@
             0.138,
             0.069,
             0.445,
-            0.084
+            0.085
           ],
           "content": [
             {
@@ -17053,7 +17055,7 @@
             0.138,
             0.512,
             0.473,
-            0.527
+            0.528
           ],
           "content": [
             {
@@ -17561,6 +17563,7 @@
             0.905,
             0.363
           ],
+          "image_path": "images/page_51_equation_3.jpg",
           "content": "\\mathrm{PMP} = \\frac {(\\mathrm{PME} \\times \\mathrm{QE}) + (\\mathrm{PMA} \\times \\mathrm{QA})}{\\mathrm{QE} + \\mathrm{QA}}, \\text {onde} \\quad \\begin{array}{l} - \\text {PME, corresponde ao preço do material estocado;} \\\\ - \\text {PMA, corresponde ao preço do material adquirido;} \\\\ - \\text {QE, corresponde à quantidade do material estocado; e} \\\\ - \\text {QA, corresponde à quantidade do material adquirido.} \\end{array}"
         },
         {
@@ -17847,6 +17850,7 @@
             0.636,
             0.215
           ],
+          "image_path": "images/page_52_equation_4.jpg",
           "content": "\\text{Monitor: R$ 600,00/R$ 2.400,00 = 0,25 = 25\\%}"
         },
         {
@@ -17858,6 +17862,7 @@
             0.619,
             0.241
           ],
+          "image_path": "images/page_52_equation_5.jpg",
           "content": "\\text{CPU: R$ 1.800,00/R$ 2.400,00 = 0,75 = 75\\%}"
         },
         {
@@ -17885,6 +17890,7 @@
             0.591,
             0.293
           ],
+          "image_path": "images/page_52_equation_7.jpg",
           "content": "\\text{Monitor: } 25\\% \\times \\text{R} 3.000,00 = \\text{R} 750,00"
         },
         {
@@ -17896,6 +17902,7 @@
             0.573,
             0.319
           ],
+          "image_path": "images/page_52_equation_8.jpg",
           "content": "\\text{CPU: } 75\\% \\times \\text{R} 3.000,00 = \\text{R} 2.250,00"
         },
         {
@@ -17937,7 +17944,7 @@
           "bbox": [
             0.209,
             0.459,
-            0.452,
+            0.451,
             0.475
           ],
           "content": [
@@ -18046,7 +18053,7 @@
           "bbox": [
             0.209,
             0.746,
-            0.402,
+            0.401,
             0.763
           ],
           "content": [
@@ -18212,7 +18219,7 @@
             0.137,
             0.277,
             0.907,
-            0.32
+            0.321
           ],
           "content": [
             {
@@ -18228,7 +18235,7 @@
             0.137,
             0.329,
             0.907,
-            0.502
+            0.503
           ],
           "content": [
             {
@@ -18244,7 +18251,7 @@
             0.137,
             0.512,
             0.907,
-            0.658
+            0.659
           ],
           "content": [
             {
@@ -18260,7 +18267,7 @@
             0.137,
             0.669,
             0.907,
-            0.737
+            0.738
           ],
           "content": [
             {
@@ -18292,7 +18299,7 @@
             0.137,
             0.773,
             0.907,
-            0.893
+            0.894
           ],
           "content": [
             {
@@ -18534,7 +18541,7 @@
           "type": "footer",
           "index": 11,
           "bbox": [
-            0.139,
+            0.14,
             0.942,
             0.24,
             0.956
@@ -18552,7 +18559,7 @@
           "bbox": [
             0.49,
             0.943,
-            0.552,
+            0.551,
             0.956
           ],
           "content": [
@@ -18773,7 +18780,7 @@
             0.825,
             0.044,
             0.906,
-            0.059
+            0.058
           ],
           "content": [
             {
@@ -18822,7 +18829,7 @@
           "bbox": [
             0.138,
             0.121,
-            0.314,
+            0.313,
             0.136
           ],
           "content": [
@@ -18982,7 +18989,7 @@
             0.137,
             0.563,
             0.908,
-            0.633
+            0.632
           ],
           "content": [
             {
@@ -19014,7 +19021,7 @@
             0.137,
             0.668,
             0.908,
-            0.815
+            0.814
           ],
           "content": [
             {
@@ -20247,7 +20254,7 @@
           "index": 12,
           "bbox": [
             0.137,
-            0.772,
+            0.773,
             0.909,
             0.841
           ],
@@ -20817,21 +20824,21 @@
         },
         {
           "type": "list",
-          "index": 6,
+          "index": 4,
           "bbox": [
             0.138,
             0.121,
-            0.906,
+            0.907,
             0.215
           ],
           "content": [
             {
               "type": "text",
-              "index": 4,
+              "index": 5,
               "bbox": [
                 0.138,
                 0.121,
-                0.906,
+                0.907,
                 0.163
               ],
               "content": [
@@ -20843,11 +20850,11 @@
             },
             {
               "type": "text",
-              "index": 5,
+              "index": 6,
               "bbox": [
                 0.138,
                 0.173,
-                0.906,
+                0.907,
                 0.215
               ],
               "content": [
@@ -20866,7 +20873,7 @@
           "bbox": [
             0.137,
             0.225,
-            0.906,
+            0.907,
             0.294
           ],
           "content": [
@@ -20911,17 +20918,17 @@
         },
         {
           "type": "list",
-          "index": 13,
+          "index": 10,
           "bbox": [
-            0.137,
+            0.138,
             0.355,
-            0.906,
-            0.554
+            0.907,
+            0.555
           ],
           "content": [
             {
               "type": "text",
-              "index": 10,
+              "index": 11,
               "bbox": [
                 0.138,
                 0.355,
@@ -20937,7 +20944,7 @@
             },
             {
               "type": "text",
-              "index": 11,
+              "index": 12,
               "bbox": [
                 0.138,
                 0.407,
@@ -20953,11 +20960,11 @@
             },
             {
               "type": "text",
-              "index": 12,
+              "index": 13,
               "bbox": [
                 0.137,
                 0.459,
-                0.906,
+                0.907,
                 0.554
               ],
               "content": [
@@ -20993,7 +21000,7 @@
           "bbox": [
             0.137,
             0.616,
-            0.906,
+            0.907,
             0.657
           ],
           "content": [
@@ -21005,17 +21012,17 @@
         },
         {
           "type": "list",
-          "index": 26,
+          "index": 16,
           "bbox": [
             0.209,
             0.668,
-            0.556,
-            0.919
+            0.557,
+            0.92
           ],
           "content": [
             {
               "type": "text",
-              "index": 16,
+              "index": 17,
               "bbox": [
                 0.209,
                 0.668,
@@ -21031,7 +21038,7 @@
             },
             {
               "type": "text",
-              "index": 17,
+              "index": 18,
               "bbox": [
                 0.21,
                 0.694,
@@ -21047,7 +21054,7 @@
             },
             {
               "type": "text",
-              "index": 18,
+              "index": 19,
               "bbox": [
                 0.21,
                 0.72,
@@ -21063,7 +21070,7 @@
             },
             {
               "type": "text",
-              "index": 19,
+              "index": 20,
               "bbox": [
                 0.21,
                 0.746,
@@ -21079,7 +21086,7 @@
             },
             {
               "type": "text",
-              "index": 20,
+              "index": 21,
               "bbox": [
                 0.21,
                 0.772,
@@ -21095,7 +21102,7 @@
             },
             {
               "type": "text",
-              "index": 21,
+              "index": 22,
               "bbox": [
                 0.21,
                 0.798,
@@ -21111,7 +21118,7 @@
             },
             {
               "type": "text",
-              "index": 22,
+              "index": 23,
               "bbox": [
                 0.21,
                 0.824,
@@ -21127,7 +21134,7 @@
             },
             {
               "type": "text",
-              "index": 23,
+              "index": 24,
               "bbox": [
                 0.21,
                 0.85,
@@ -21143,7 +21150,7 @@
             },
             {
               "type": "text",
-              "index": 24,
+              "index": 25,
               "bbox": [
                 0.21,
                 0.876,
@@ -21159,12 +21166,12 @@
             },
             {
               "type": "text",
-              "index": 25,
+              "index": 26,
               "bbox": [
                 0.209,
                 0.902,
                 0.314,
-                0.919
+                0.92
               ],
               "content": [
                 {
@@ -21252,7 +21259,7 @@
             0.825,
             0.044,
             0.906,
-            0.059
+            0.058
           ],
           "content": [
             {
@@ -21333,7 +21340,7 @@
           "bbox": [
             0.139,
             0.407,
-            0.332,
+            0.331,
             0.423
           ],
           "content": [
@@ -24998,7 +25005,7 @@
             0.826,
             0.044,
             0.906,
-            0.059
+            0.058
           ],
           "content": [
             {
@@ -25029,8 +25036,8 @@
           "bbox": [
             0.21,
             0.095,
-            0.294,
-            0.111
+            0.293,
+            0.11
           ],
           "content": [
             {
@@ -25061,7 +25068,7 @@
           "bbox": [
             0.137,
             0.199,
-            0.476,
+            0.475,
             0.215
           ],
           "content": [
@@ -25078,7 +25085,7 @@
           "bbox": [
             0.137,
             0.225,
-            0.909,
+            0.907,
             0.372
           ],
           "content": [
@@ -25158,7 +25165,7 @@
           "bbox": [
             0.209,
             0.694,
-            0.787,
+            0.785,
             0.71
           ],
           "content": [
@@ -25206,7 +25213,7 @@
           "bbox": [
             0.137,
             0.798,
-            0.909,
+            0.907,
             0.893
           ],
           "content": [
@@ -25222,8 +25229,8 @@
           "bbox": [
             0.21,
             0.903,
-            0.376,
-            0.92
+            0.375,
+            0.919
           ],
           "content": [
             {
@@ -26886,7 +26893,7 @@
           "type": "header",
           "index": 1,
           "bbox": [
-            0.825,
+            0.826,
             0.044,
             0.906,
             0.058
@@ -27159,7 +27166,7 @@
           "bbox": [
             0.493,
             0.943,
-            0.554,
+            0.555,
             0.956
           ],
           "content": [
@@ -30718,7 +30725,7 @@
             0.234,
             0.485,
             0.596,
-            0.502
+            0.501
           ],
           "content": [
             {
@@ -31011,7 +31018,7 @@
           "bbox": [
             0.138,
             0.433,
-            0.907,
+            0.906,
             0.58
           ],
           "content": [
@@ -31021,7 +31028,7 @@
               "bbox": [
                 0.138,
                 0.433,
-                0.907,
+                0.906,
                 0.476
               ],
               "content": [
@@ -31860,7 +31867,7 @@
             0.826,
             0.044,
             0.906,
-            0.058
+            0.059
           ],
           "content": [
             {
@@ -32118,7 +32125,7 @@
           "index": 4,
           "bbox": [
             0.138,
-            0.173,
+            0.172,
             0.494,
             0.188
           ],
@@ -32135,9 +32142,9 @@
           "index": 5,
           "bbox": [
             0.138,
-            0.2,
+            0.199,
             0.535,
-            0.216
+            0.215
           ],
           "content": [
             {
@@ -32152,7 +32159,7 @@
           "index": 6,
           "bbox": [
             0.137,
-            0.226,
+            0.225,
             0.907,
             0.294
           ],
@@ -32168,7 +32175,7 @@
           "index": 7,
           "bbox": [
             0.138,
-            0.304,
+            0.303,
             0.461,
             0.32
           ],
@@ -32185,7 +32192,7 @@
           "index": 8,
           "bbox": [
             0.21,
-            0.33,
+            0.329,
             0.341,
             0.345
           ],
@@ -32201,7 +32208,7 @@
           "index": 9,
           "bbox": [
             0.137,
-            0.356,
+            0.355,
             0.906,
             0.397
           ],
@@ -32217,7 +32224,7 @@
           "index": 10,
           "bbox": [
             0.21,
-            0.408,
+            0.407,
             0.543,
             0.424
           ],
@@ -32233,7 +32240,7 @@
           "index": 11,
           "bbox": [
             0.137,
-            0.434,
+            0.433,
             0.907,
             0.527
           ],
@@ -32294,55 +32301,42 @@
           "level": 2
         },
         {
-          "type": "list",
-          "index": 17,
+          "type": "text",
+          "index": 15,
           "bbox": [
             0.137,
             0.668,
+            0.907,
+            0.763
+          ],
+          "content": [
+            {
+              "type": "text",
+              "content": "a) o material permanente que compõe o imobilizado das OMPS e os bens intangíveis deverão ser escriturados nos módulos CADBEM e Intangíveis (quando disponível) do SIS-BENS e apropriado no SIAFI, pelo Gestor Patrimonial, em conformidade com as situações disponíveis no MAPCONT; e"
+            }
+          ]
+        },
+        {
+          "type": "text",
+          "index": 16,
+          "bbox": [
+            0.137,
+            0.772,
             0.907,
             0.919
           ],
           "content": [
             {
               "type": "text",
-              "index": 15,
-              "bbox": [
-                0.137,
-                0.668,
-                0.907,
-                0.763
-              ],
-              "content": [
-                {
-                  "type": "text",
-                  "content": "a) o material permanente que compõe o imobilizado das OMPS e os bens intangíveis deverão ser escriturados nos módulos CADBEM e Intangíveis (quando disponível) do SIS-BENS e apropriado no SIAFI, pelo Gestor Patrimonial, em conformidade com as situações disponíveis no MAPCONT; e"
-                }
-              ]
-            },
-            {
-              "type": "text",
-              "index": 16,
-              "bbox": [
-                0.137,
-                0.773,
-                0.907,
-                0.919
-              ],
-              "content": [
-                {
-                  "type": "text",
-                  "content": "b) o estoque para consumo, o estoque de manufaturados e o estoque para fabricação (excepcionalmente, em algumas OM), deverão ser escriturados no módulo SISTOQUE do SISBENS e apropriados no SIAFI, pelo Gestor de Material para Fabricação, em conformidade com as Normas SGM-307 e as situações disponíveis no MAPCONT. Os excessos verificados quando da realização dos inventários deverão ser destinados de acordo com os procedimentos previstos no Capítulo 3 destas Normas."
-                }
-              ]
+              "content": "b) o estoque para consumo, o estoque de manufaturados e o estoque para fabricação (excepcionalmente, em algumas OM), deverão ser escriturados no módulo SISTOQUE do SISBENS e apropriados no SIAFI, pelo Gestor de Material para Fabricação, em conformidade com as Normas SGM-307 e as situações disponíveis no MAPCONT. Os excessos verificados quando da realização dos inventários deverão ser destinados de acordo com os procedimentos previstos no Capítulo 3 destas Normas."
             }
-          ],
-          "sub_type": "text"
+          ]
         },
         {
           "type": "footer",
-          "index": 18,
+          "index": 17,
           "bbox": [
-            0.14,
+            0.137,
             0.942,
             0.24,
             0.956
@@ -32356,7 +32350,7 @@
         },
         {
           "type": "page_number",
-          "index": 19,
+          "index": 18,
           "bbox": [
             0.498,
             0.943,
@@ -32372,7 +32366,7 @@
         },
         {
           "type": "footer",
-          "index": 20,
+          "index": 19,
           "bbox": [
             0.857,
             0.943,
@@ -33545,7 +33539,7 @@
           "content": [
             {
               "type": "text",
-              "content": "Os bens patrimoniais adquiridos no exterior pelas OME, em atendimento aos pedi-dos das OM e, de acordo com os créditos autorizados, deverão ser solicitados via Sistema de Obtenção da Marinha (SOMAR), e a compatibilização financeira entre os Sistemas de Controle Patrimonial e o SIAFI deverá ser realizada com base no MAPCONT. Esses procedimentos visam atender às seguintes situações:"
+              "content": "Os bens patrimoniais adquiridos no exterior pelas OME, em atendimento aos pedi-\ndos das OM e, de acordo com os créditos autorizados, deverão ser solicitados via Sistema de\nObtenção da Marinha (SOMAR), e a compatibilização financeira entre os Sistemas de Contro-\nle Patrimonial e o SIAFI deverá ser realizada com base no MAPCONT. Esses procedimentos vi-\nsam atender às seguintes situações:"
             }
           ]
         },
@@ -34986,7 +34980,7 @@
           "bbox": [
             0.498,
             0.943,
-            0.549,
+            0.55,
             0.956
           ],
           "content": [
@@ -36673,7 +36667,7 @@
               "type": "text",
               "index": 20,
               "bbox": [
-                0.209,
+                0.21,
                 0.902,
                 0.46,
                 0.919
@@ -38406,7 +38400,7 @@
           "sub_type": "text"
         },
         {
-          "type": "paragraph_title",
+          "type": "text",
           "index": 10,
           "bbox": [
             0.138,
@@ -38419,8 +38413,7 @@
               "type": "text",
               "content": "6.3.2. Documentos para Prestação de Contas anual das OMF e OMCON"
             }
-          ],
-          "level": 2
+          ]
         },
         {
           "type": "list",
@@ -38484,7 +38477,7 @@
           "sub_type": "text"
         },
         {
-          "type": "paragraph_title",
+          "type": "text",
           "index": 15,
           "bbox": [
             0.138,
@@ -38497,8 +38490,7 @@
               "type": "text",
               "content": "6.3.3. Orientações adicionais para a Prestação de Contas Anual"
             }
-          ],
-          "level": 2
+          ]
         },
         {
           "type": "text",
@@ -38507,7 +38499,7 @@
             0.137,
             0.486,
             0.906,
-            0.529
+            0.528
           ],
           "content": [
             {
@@ -38550,7 +38542,7 @@
           ]
         },
         {
-          "type": "paragraph_title",
+          "type": "text",
           "index": 19,
           "bbox": [
             0.137,
@@ -38563,8 +38555,7 @@
               "type": "text",
               "content": "6.4.1. Documentos para Prestação de Contas, por início de Gestão, das OMCI, OMCE, OMCN e OMPS"
             }
-          ],
-          "level": 2
+          ]
         },
         {
           "type": "list",
@@ -41486,7 +41477,7 @@
             0.472,
             0.068,
             0.576,
-            0.083
+            0.084
           ],
           "content": [
             {
@@ -41503,7 +41494,7 @@
             0.351,
             0.094,
             0.697,
-            0.111
+            0.112
           ],
           "content": [
             {
@@ -41585,9 +41576,9 @@
           "index": 8,
           "bbox": [
             0.137,
-            0.355,
+            0.354,
             0.906,
-            0.397
+            0.398
           ],
           "content": [
             {
@@ -41653,7 +41644,7 @@
             0.137,
             0.511,
             0.906,
-            0.553
+            0.554
           ],
           "content": [
             {
@@ -41684,9 +41675,9 @@
           "index": 14,
           "bbox": [
             0.137,
-            0.59,
+            0.589,
             0.906,
-            0.632
+            0.633
           ],
           "content": [
             {
@@ -41717,7 +41708,7 @@
           "index": 16,
           "bbox": [
             0.137,
-            0.668,
+            0.667,
             0.906,
             0.709
           ],
@@ -41903,7 +41894,7 @@
             0.137,
             0.094,
             0.907,
-            0.163
+            0.162
           ],
           "content": [
             {
@@ -42002,7 +41993,7 @@
             0.139,
             0.433,
             0.371,
-            0.45
+            0.449
           ],
           "content": [
             {
@@ -42017,7 +42008,7 @@
           "index": 10,
           "bbox": [
             0.137,
-            0.46,
+            0.459,
             0.906,
             0.501
           ],
@@ -42033,7 +42024,7 @@
           "index": 13,
           "bbox": [
             0.138,
-            0.512,
+            0.511,
             0.906,
             0.606
           ],
@@ -42043,7 +42034,7 @@
               "index": 11,
               "bbox": [
                 0.138,
-                0.512,
+                0.511,
                 0.906,
                 0.554
               ],
@@ -42059,7 +42050,7 @@
               "index": 12,
               "bbox": [
                 0.138,
-                0.564,
+                0.563,
                 0.906,
                 0.606
               ],
@@ -42095,7 +42086,7 @@
           "index": 15,
           "bbox": [
             0.137,
-            0.643,
+            0.642,
             0.907,
             0.711
           ],
@@ -42111,7 +42102,7 @@
           "index": 16,
           "bbox": [
             0.137,
-            0.721,
+            0.72,
             0.907,
             0.868
           ],
@@ -42600,6 +42591,7 @@
             0.815,
             0.345
           ],
+          "image_path": "images/page_130_equation_10.jpg",
           "content": "\\text {Depreciação do mês} = \\frac {\\text {Valor depreciável}}{\\text {Vida útil}} = \\frac {9 0 0 , 0 0}{6 0} = 1 5, 0 0"
         },
         {
@@ -42849,7 +42841,7 @@
           "index": 26,
           "bbox": [
             0.857,
-            0.942,
+            0.943,
             0.908,
             0.956
           ],
@@ -43615,7 +43607,7 @@
           "index": 10,
           "bbox": [
             0.857,
-            0.943,
+            0.942,
             0.906,
             0.956
           ],
@@ -45143,7 +45135,7 @@
           "bbox": [
             0.498,
             0.943,
-            0.55,
+            0.549,
             0.956
           ],
           "content": [

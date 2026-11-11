@@ -50,6 +50,13 @@ public class ParserLegislacaoService {
      * @throws IllegalArgumentException quando nenhum artigo da própria lei é reconhecido
      */
     public List<ElementoLegislacao> parse(List<BlocoLegislacao> blocos) {
+        return parseCompleto(blocos).stream()
+                .filter(elemento -> !ESTRUTURA.contains(elemento.tipo()) && temConteudo(elemento))
+                .toList();
+    }
+
+    /** Mantém os títulos de capítulo/seção/subseção e marcadores vazios para a árvore normativa. */
+    public List<ElementoLegislacao> parseCompleto(List<BlocoLegislacao> blocos) {
         List<ElementoLegislacao> elementos = new ArrayList<>();
         boolean aspasAbertas = false;
         boolean blockquoteAnterior = false;
@@ -92,9 +99,7 @@ public class ParserLegislacaoService {
         if (elementos.stream().noneMatch(elemento -> elemento.tipo() == ARTIGO && !elemento.citacao())) {
             throw new IllegalArgumentException("O HTML não contém artigos reconhecíveis da legislação.");
         }
-        return agrupador.agrupar(montador.montarLegislacao(elementos)).stream()
-                .filter(elemento -> !ESTRUTURA.contains(elemento.tipo()) && temConteudo(elemento))
-                .toList();
+        return List.copyOf(agrupador.agrupar(montador.montarLegislacao(elementos)));
     }
 
     /**

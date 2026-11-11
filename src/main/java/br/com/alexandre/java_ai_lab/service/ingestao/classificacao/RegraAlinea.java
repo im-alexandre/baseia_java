@@ -5,11 +5,11 @@ import br.com.alexandre.java_ai_lab.dto.ElementoNormativo.Tipo;
 import java.util.Optional;
 import java.util.regex.Pattern;
 
-/** Reconhece uma ou duas letras minúsculas seguidas de parêntese no início do texto. */
+/** Reconhece uma ou duas letras minúsculas seguidas de parêntese, inclusive sem espaço. */
 public class RegraAlinea implements RegraClassificacao {
-    private static final Pattern PADRAO = Pattern.compile("^([a-z]{1,2}\\))(?=\\h|$)");
+    private static final Pattern PADRAO = Pattern.compile("^([a-z]{1,2}\\))");
 
-    /** Identifica o marcador textual sem exigir o tipo atribuído pelo MinerU ou recuo lateral. */
+    /** Aceita "m)devolução" e "b)nos casos" sem alterar marcador, texto ou caixa. */
     @Override
     public Optional<Classificacao> classificar(BlocoClassificacao bloco, ContextoClassificacao contexto) {
         var marcador = PADRAO.matcher(bloco.texto());

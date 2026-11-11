@@ -32,10 +32,15 @@ class ParserLegislacaoControllerTest {
     private final JsonMapper mapper = JsonMapper.builder().build();
     private final DownloadLegislacaoService download = mock(DownloadLegislacaoService.class);
 
-    /** Confere a lei local completa, sua ordem documental e o contrato próprio da origem HTML. */
+    /** Confere o HTML de regressão mantido em test/resources pelo POST, sem amostras no runtime. */
     @Test
-    void getSemParametrosProcessaLeiRealDeClasspath() throws Exception {
-        JsonNode elementos = mapper.readTree(mvc().perform(get(ROTA))
+    void postProcessaLeiRealDeTestResources() throws Exception {
+        byte[] html;
+        try (var entrada = getClass().getResourceAsStream("/ingestao/legislacao/lei_14129_2021.html")) {
+            assertThat(entrada).isNotNull();
+            html = entrada.readAllBytes();
+        }
+        JsonNode elementos = mapper.readTree(mvc().perform(post(ROTA).contentType(HTML_UTF8).content(html))
                 .andExpect(status().isOk())
                 .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
                 .andReturn().getResponse().getContentAsByteArray());
@@ -202,22 +207,10 @@ class ParserLegislacaoControllerTest {
         verifyNoInteractions(download);
     }
 
-    /** A mesma fixture enviada por POST produz exatamente a resposta JSON do exemplo local GET. */
+    /** Sem amostras empacotadas, GET exige URL explícita. */
     @Test
-    void postDaFixtureRealEquivaleAoGetLocal() throws Exception {
-        MockMvc mvc = mvc();
-        byte[] respostaGet = mvc.perform(get(ROTA)).andExpect(status().isOk())
-                .andReturn().getResponse().getContentAsByteArray();
-        try (var entrada = getClass().getResourceAsStream("/ingestao/legislacao/lei_14129_2021.html")) {
-            assertThat(entrada).isNotNull();
-            byte[] respostaPost = mvc.perform(post(ROTA).contentType(HTML_UTF8)
-                            .content(entrada.readAllBytes()))
-                    .andExpect(status().isOk())
-                    .andExpect(content().contentTypeCompatibleWith(MediaType.APPLICATION_JSON))
-                    .andReturn().getResponse().getContentAsByteArray();
-
-            assertThat(mapper.readTree(respostaPost)).isEqualTo(mapper.readTree(respostaGet));
-        }
+    void getSemUrlRetorna400() throws Exception {
+        mvc().perform(get(ROTA)).andExpect(status().isBadRequest());
         verifyNoInteractions(download);
     }
 
