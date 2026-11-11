@@ -35,4 +35,4 @@ build/
 ### Local credentials ###
 .env
 .env.*
-src/test/resources/ingestao/mineru/SGM-303-Rev7.json
+src/test/resources/*
